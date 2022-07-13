@@ -2,6 +2,8 @@ package DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
+
 
 public abstract class JDBC {
 
@@ -26,6 +28,10 @@ public abstract class JDBC {
         {
             System.out.println("Error:" + e.getMessage());
         }
+    }
+
+    public static Connection getConnection(){
+        return connection;
     }
 
     public static void closeConnection() {
