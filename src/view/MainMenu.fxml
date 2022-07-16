@@ -7,33 +7,53 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenu">
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenu">
    <children>
       <Label layoutX="250.0" layoutY="14.0" text="Scheduling System">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="45.0" layoutY="31.0" text="Customers" />
-      <TableView layoutX="14.0" layoutY="48.0" prefHeight="134.0" prefWidth="574.0">
+      <Label layoutX="45.0" layoutY="31.0" text="Customers">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TableView layoutX="15.0" layoutY="51.0" prefHeight="200.0" prefWidth="771.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="200.0" text="Name" />
+            <TableColumn prefWidth="200.0" text="Address" />
+            <TableColumn prefWidth="100.0" text="Postal Code" />
+            <TableColumn prefWidth="125.0" text="Phone" />
+            <TableColumn prefWidth="75.0" text="Division ID" />
         </columns>
       </TableView>
-      <Button layoutX="304.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Add Customer" />
-      <Button layoutX="400.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Edit Customer" />
-      <Button layoutX="496.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Delete Customer" />
-      <TableView layoutX="14.0" layoutY="263.0" prefHeight="134.0" prefWidth="574.0">
+      <Button layoutX="472.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Add Customer" />
+      <Button layoutX="574.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Edit Customer" />
+      <Button layoutX="678.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Delete Customer" />
+      <TableView layoutX="15.0" layoutY="499.0" prefHeight="200.0" prefWidth="771.0">
          <columns>
-            <TableColumn prefWidth="75.0" text="C1" />
-            <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="25.0" text="ID" />
+            <TableColumn prefWidth="75.0" text="Title" />
+            <TableColumn prefWidth="75.0" text="Customer ID" />
+            <TableColumn prefWidth="75.0" text="Contact ID" />
+            <TableColumn prefWidth="75.0" text="Description" />
+            <TableColumn prefWidth="75.0" text="Location" />
+            <TableColumn prefWidth="75.0" text="Type" />
+            <TableColumn prefWidth="75.0" text="Start" />
+            <TableColumn prefWidth="75.0" text="End" />
          </columns>
       </TableView>
-      <Label layoutX="45.0" layoutY="237.0" text="Appointments" />
-      <Button layoutX="312.0" layoutY="404.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Add Appointment" />
-      <Button layoutX="406.0" layoutY="404.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Edit Appointment" />
-      <Button layoutX="498.0" layoutY="404.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Delete Appointment" />
+      <Label layoutX="19.0" layoutY="472.0" text="Appointments">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button layoutX="415.0" layoutY="708.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Add Appointment" />
+      <Button layoutX="535.0" layoutY="708.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Edit Appointment" />
+      <Button layoutX="659.0" layoutY="708.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Delete Appointment" />
+      <Label layoutX="15.0" layoutY="744.0" text="Current User:" />
+      <Label layoutX="15.0" layoutY="769.0" text="ZoneID:" />
+      <Label layoutX="91.0" layoutY="744.0" text="User" />
+      <Label layoutX="63.0" layoutY="769.0" text="Time/Zone" />
    </children>
 </AnchorPane>
