@@ -26,8 +26,8 @@
         <TextField layoutX="101.0" layoutY="282.0" />
         <ChoiceBox layoutX="101.0" layoutY="180.0" prefWidth="150.0" />
         <ChoiceBox layoutX="101.0" layoutY="213.0" prefWidth="150.0" />
-        <Button layoutX="134.0" layoutY="317.0" mnemonicParsing="false" text="Save" />
-        <Button layoutX="198.0" layoutY="317.0" mnemonicParsing="false" text="Cancel" />
+        <Button layoutX="134.0" layoutY="317.0" mnemonicParsing="false" onAction="#OnActionSaveCustomer" text="Save" />
+        <Button layoutX="198.0" layoutY="317.0" mnemonicParsing="false" onAction="#OnActionDisplayMainMenu" text="Cancel" />
       <TextField disable="true" layoutX="102.0" layoutY="70.0" />
       <Label layoutX="32.0" layoutY="74.0" text="ID:" />
     </children>

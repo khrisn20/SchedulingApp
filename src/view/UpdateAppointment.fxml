@@ -46,8 +46,8 @@
         <ComboBox layoutX="380.0" layoutY="377.0" prefHeight="25.0" prefWidth="40.0" />
         <Label layoutX="442.0" layoutY="381.0" text="SS:" />
         <ComboBox layoutX="464.0" layoutY="377.0" prefHeight="25.0" prefWidth="40.0" />
-        <Button layoutX="18.0" layoutY="424.0" mnemonicParsing="false" text="Save" />
-        <Button layoutX="78.0" layoutY="424.0" mnemonicParsing="false" text="Cancel" />
+        <Button layoutX="18.0" layoutY="424.0" mnemonicParsing="false" onAction="#OnActionUpdateAppointment" text="Save" />
+        <Button layoutX="78.0" layoutY="424.0" mnemonicParsing="false" onAction="#OnActionDisplayMainMenu" text="Cancel" />
       <Label layoutX="7.0" layoutY="77.0" text="Appointment ID:" />
       <TextField disable="true" layoutX="104.0" layoutY="73.0" />
     </children>

@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateAppointment">
    <children>
       <Label layoutX="14.0" layoutY="59.0" text="Customer ID" />
@@ -48,7 +47,7 @@
       <ComboBox layoutX="380.0" layoutY="331.0" prefHeight="25.0" prefWidth="40.0" />
       <Label layoutX="442.0" layoutY="335.0" text="SS:" />
       <ComboBox layoutX="464.0" layoutY="331.0" prefHeight="25.0" prefWidth="40.0" />
-      <Button layoutX="14.0" layoutY="380.0" mnemonicParsing="false" text="Save" />
-      <Button layoutX="78.0" layoutY="380.0" mnemonicParsing="false" text="Cancel" />
+      <Button layoutX="14.0" layoutY="380.0" mnemonicParsing="false" onAction="#OnActionSaveAppointment" text="Save" />
+      <Button layoutX="78.0" layoutY="380.0" mnemonicParsing="false" onAction="#OnActionDisplayMainMenu" text="Cancel" />
    </children>
 </AnchorPane>
