@@ -28,7 +28,7 @@
             <TableColumn prefWidth="75.0" text="Division ID" />
         </columns>
       </TableView>
-      <Button layoutX="449.0" layoutY="268.0" mnemonicParsing="false" onAction="#OnActionDisplayAddCustomer" prefHeight="25.0" prefWidth="96.0" text="Add Customer" />
+      <Button layoutX="438.0" layoutY="268.0" mnemonicParsing="false" onAction="#OnActionDisplayCreateCustomer" prefHeight="25.0" prefWidth="107.0" text="Create Customer" />
       <Button layoutX="556.0" layoutY="268.0" mnemonicParsing="false" onAction="#OnActionDisplayUpdateCustomer" prefHeight="25.0" prefWidth="114.0" text="Update Customer" />
       <Button layoutX="678.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Delete Customer" />
       <TableView layoutX="15.0" layoutY="358.0" prefHeight="200.0" prefWidth="771.0">
@@ -48,7 +48,7 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Button layoutX="392.0" layoutY="566.0" mnemonicParsing="false" onAction="#OnActionDisplayAddAppointment" prefHeight="25.0" prefWidth="114.0" text="Add Appointment" />
+      <Button layoutX="380.0" layoutY="566.0" mnemonicParsing="false" onAction="#OnActionDisplayCreateAppointment" prefHeight="25.0" prefWidth="126.0" text="Create Appointment" />
       <Button layoutX="517.0" layoutY="566.0" mnemonicParsing="false" onAction="#OnActionDisplayUpdateAppointment" prefHeight="25.0" prefWidth="133.0" text="Update Appointment" />
       <Button layoutX="660.0" layoutY="566.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Delete Appointment" />
       <Label layoutX="15.0" layoutY="744.0" text="Current User:" />

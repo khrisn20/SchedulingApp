@@ -16,7 +16,7 @@ public class MainMenu {
     Parent scene;
 
     @FXML
-    void OnActionDisplayAddAppointment(ActionEvent event) throws IOException {
+    void OnActionDisplayCreateAppointment(ActionEvent event) throws IOException {
         stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
         scene = FXMLLoader.load(getClass().getResource("/view/CreateAppointment.fxml"));
         stage.setScene(new Scene(scene));
@@ -24,7 +24,7 @@ public class MainMenu {
     }
 
     @FXML
-    void OnActionDisplayAddCustomer(ActionEvent event) throws IOException {
+    void OnActionDisplayCreateCustomer(ActionEvent event) throws IOException {
             stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
             scene = FXMLLoader.load(getClass().getResource("/view/CreateCustomer.fxml"));
             stage.setScene(new Scene(scene));
