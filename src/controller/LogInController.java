@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,13 +15,15 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class LogInController implements Initializable {
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("I am initialized");
-    }
 
     Stage stage;
     Parent scene;
+
+    @FXML
+    private TextField passTxt;
+
+    @FXML
+    private TextField userTxt;
 
     @FXML
     void OnActionDisplayMainMenu(ActionEvent event) throws IOException {
@@ -29,4 +32,9 @@ public class LogInController implements Initializable {
         stage.setScene(new Scene(scene));
         stage.show();
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) { System.out.println("I am initialized");
+    }
+
 }

@@ -6,7 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,6 +16,57 @@ import java.util.ResourceBundle;
 public class UpdateAppointmentController implements Initializable {
     Stage stage;
     Parent scene;
+
+    @FXML
+    private TextField appIdTxt;
+
+    @FXML
+    private ChoiceBox<?> contactDrop;
+
+    @FXML
+    private TextField custIdTxt;
+
+    @FXML
+    private TextField descTxt;
+
+    @FXML
+    private DatePicker endCal;
+
+    @FXML
+    private ComboBox<?> endHr;
+
+    @FXML
+    private ComboBox<?> endMin;
+
+    @FXML
+    private ComboBox<?> endSec;
+
+    @FXML
+    private ChoiceBox<?> locCountryDrop;
+
+    @FXML
+    private ChoiceBox<?> locDivDrop;
+
+    @FXML
+    private DatePicker startCal;
+
+    @FXML
+    private ComboBox<?> startHr;
+
+    @FXML
+    private ComboBox<?> startMin;
+
+    @FXML
+    private ComboBox<?> startSec;
+
+    @FXML
+    private TextField titleTxt;
+
+    @FXML
+    private ChoiceBox<?> typeDrop;
+
+    @FXML
+    private TextField userIdTxt;
 
     @FXML
     void OnActionDisplayMainMenu(ActionEvent event) throws IOException {

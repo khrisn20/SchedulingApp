@@ -7,6 +7,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,6 +18,24 @@ import java.util.ResourceBundle;
 public class CreateCustomerController implements Initializable {
     Stage stage;
     Parent scene;
+
+    @FXML
+    private TextField addressTxt;
+
+    @FXML
+    private ChoiceBox<?> countryDrop;
+
+    @FXML
+    private TextField nameTxt;
+
+    @FXML
+    private TextField phonetxt;
+
+    @FXML
+    private TextField postalTxt;
+
+    @FXML
+    private ChoiceBox<?> stateDrop;
 
     @FXML
     void OnActionDisplayMainMenu(ActionEvent event) throws IOException {
@@ -32,6 +52,8 @@ public class CreateCustomerController implements Initializable {
         stage.setScene(new Scene(scene));
         stage.show();
     }
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
