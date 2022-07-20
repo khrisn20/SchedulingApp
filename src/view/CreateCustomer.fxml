@@ -20,12 +20,12 @@
       <Label layoutX="28.0" layoutY="175.0" text="State:" />
       <Label layoutX="28.0" layoutY="208.0" text="Postal Code:" />
       <Label layoutX="28.0" layoutY="243.0" text="Phone:" />
-      <TextField layoutX="100.0" layoutY="57.0" />
-      <TextField layoutX="100.0" layoutY="94.0" />
-      <TextField layoutX="100.0" layoutY="204.0" />
-      <TextField layoutX="100.0" layoutY="239.0" />
-      <ChoiceBox layoutX="100.0" layoutY="135.0" prefWidth="150.0" />
-      <ChoiceBox layoutX="100.0" layoutY="171.0" prefWidth="150.0" />
+      <TextField fx:id="nameTxt" layoutX="100.0" layoutY="57.0" />
+      <TextField fx:id="addressTxt" layoutX="100.0" layoutY="94.0" />
+      <TextField fx:id="postalTxt" layoutX="100.0" layoutY="204.0" />
+      <TextField fx:id="phonetxt" layoutX="100.0" layoutY="239.0" />
+      <ChoiceBox fx:id="countryDrop" layoutX="100.0" layoutY="135.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="stateDrop" layoutX="100.0" layoutY="171.0" prefWidth="150.0" />
       <Button layoutX="134.0" layoutY="285.0" mnemonicParsing="false" onAction="#OnActionSaveCustomer" text="Save" />
       <Button layoutX="198.0" layoutY="285.0" mnemonicParsing="false" onAction="#OnActionDisplayMainMenu" text="Cancel" />
    </children>
