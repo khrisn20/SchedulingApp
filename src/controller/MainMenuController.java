@@ -10,9 +10,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
+import model.Appointment;
+import model.Country;
+import model.Customer;
+import model.FirstLevelDivision;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
@@ -21,52 +26,63 @@ public class MainMenuController implements Initializable {
     Parent scene;
 
     @FXML
-    private TableColumn<?, ?> addressClmn;
+    private TableView<Customer> custTableview;
 
     @FXML
-    private TableColumn<?, ?> appIdClmn;
+    private TableColumn<Customer, Integer> custIdClmn;
 
     @FXML
-    private TableView<?> appTableview;
+    private TableColumn<Customer, String> nameClmn;
 
     @FXML
-    private TableColumn<?, ?> contactIdClmn;
+    private TableColumn<Customer, String> addressClmn;
 
     @FXML
-    private TableColumn<?, ?> custIdClmn;
+    private TableColumn<Country, String> countryClmn;
 
     @FXML
-    private TableView<?> custTableview;
+    private TableColumn<FirstLevelDivision, String> stateClmn;
 
     @FXML
-    private TableColumn<?, ?> descClmn;
+    private TableColumn<Customer, String> postalClmn;
 
     @FXML
-    private TableColumn<?, ?> dividClmn;
+    private TableColumn<Customer, String> phoneClmn;
+
+
 
     @FXML
-    private TableColumn<?, ?> endClmn;
+    private TableView<Appointment> appTableview;
 
     @FXML
-    private TableColumn<?, ?> locClmn;
+    private TableColumn<Appointment, Integer> appIdClmn;
 
     @FXML
-    private TableColumn<?, ?> nameClmn;
+    private TableColumn<Appointment, String> titleClmn;
 
     @FXML
-    private TableColumn<?, ?> phoneClmn;
+    private TableColumn<Appointment, Integer> appCustIdClmn;
 
     @FXML
-    private TableColumn<?, ?> postalClmn;
+    private TableColumn<Appointment, Integer> contactIdClmn;
 
     @FXML
-    private TableColumn<?, ?> startClmn;
+    private TableColumn<Appointment, String> descClmn;
 
     @FXML
-    private TableColumn<?, ?> titleClmn;
+    private TableColumn<Appointment, String> locClmn;
 
     @FXML
-    private TableColumn<?, ?> typeClmn;
+    private TableColumn<Appointment, String> typeClmn;
+
+    @FXML
+    private TableColumn<Appointment, LocalDateTime> startClmn;
+
+    @FXML
+    private TableColumn<Appointment, LocalDateTime> endClmn;
+
+
+
 
     @FXML
     void OnActionDisplayCreateAppointment(ActionEvent event) throws IOException {

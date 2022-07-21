@@ -20,12 +20,13 @@
          </font></Label>
       <TableView fx:id="custTableview" layoutX="15.0" layoutY="51.0" prefHeight="200.0" prefWidth="771.0">
         <columns>
-          <TableColumn fx:id="custIdClmn" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="nameClmn" prefWidth="200.0" text="Name" />
+          <TableColumn fx:id="custIdClmn" prefWidth="40.0" text="ID" />
+          <TableColumn fx:id="nameClmn" prefWidth="150.0" text="Name" />
             <TableColumn fx:id="addressClmn" prefWidth="200.0" text="Address" />
-            <TableColumn fx:id="postalClmn" prefWidth="100.0" text="Postal Code" />
+            <TableColumn fx:id="countryClmn" prefWidth="90.0" text="Country" />
+            <TableColumn fx:id="stateClmn" prefWidth="90.0" text="State" />
+            <TableColumn fx:id="postalClmn" prefWidth="75.0" text="Postal Code" />
             <TableColumn fx:id="phoneClmn" prefWidth="125.0" text="Phone" />
-            <TableColumn fx:id="dividClmn" prefWidth="75.0" text="Division ID" />
         </columns>
       </TableView>
       <Button layoutX="438.0" layoutY="268.0" mnemonicParsing="false" onAction="#OnActionDisplayCreateCustomer" prefHeight="25.0" prefWidth="107.0" text="Create Customer" />
@@ -33,9 +34,9 @@
       <Button layoutX="678.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Delete Customer" />
       <TableView fx:id="appTableview" layoutX="15.0" layoutY="358.0" prefHeight="200.0" prefWidth="771.0">
          <columns>
-            <TableColumn fx:id="appIdClmn" prefWidth="25.0" text="ID" />
+            <TableColumn fx:id="appIdClmn" prefWidth="40.0" text="ID" />
             <TableColumn fx:id="titleClmn" prefWidth="75.0" text="Title" />
-            <TableColumn fx:id="custIdClmn" prefWidth="75.0" text="Customer ID" />
+            <TableColumn fx:id="appCustIdClmn" prefWidth="75.0" text="Customer ID" />
             <TableColumn fx:id="contactIdClmn" prefWidth="75.0" text="Contact ID" />
             <TableColumn fx:id="descClmn" prefWidth="75.0" text="Description" />
             <TableColumn fx:id="locClmn" prefWidth="75.0" text="Location" />
