@@ -9,11 +9,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import model.Appointment;
-import model.Country;
-import model.Customer;
-import model.FirstLevelDivision;
+import model.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -119,6 +117,38 @@ public class MainMenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
+
+        custTableview.setItems(DataProvider.getAllCustomers());
+        custIdClmn.setCellValueFactory(new PropertyValueFactory<>("customer_id"));
+        nameClmn.setCellValueFactory(new PropertyValueFactory<>("customer_name"));
+        addressClmn.setCellValueFactory(new PropertyValueFactory<>("address"));
+        countryClmn.setCellValueFactory(new PropertyValueFactory<>("country"));
+        stateClmn.setCellValueFactory(new PropertyValueFactory<>("division"));
+        postalClmn.setCellValueFactory(new PropertyValueFactory<>("postal_code"));
+        phoneClmn.setCellValueFactory(new PropertyValueFactory<>("phone"));
+
+        appTableview.setItems(DataProvider.getAllAppointments());
+        appIdClmn.setCellValueFactory(new PropertyValueFactory<>("appointment_id"));
+        titleClmn.setCellValueFactory(new PropertyValueFactory<>("title"));
+        appCustIdClmn.setCellValueFactory(new PropertyValueFactory<>("customer_id"));
+        contactIdClmn.setCellValueFactory(new PropertyValueFactory<>("contact_id"));
+        descClmn.setCellValueFactory(new PropertyValueFactory<>("description"));
+        locClmn.setCellValueFactory(new PropertyValueFactory<>("location"));
+        typeClmn.setCellValueFactory(new PropertyValueFactory<>("type"));
+        startClmn.setCellValueFactory(new PropertyValueFactory<>("start"));
+        endClmn.setCellValueFactory(new PropertyValueFactory<>("end"));
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
