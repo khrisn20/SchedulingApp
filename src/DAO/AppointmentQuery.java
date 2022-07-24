@@ -54,4 +54,12 @@ public class AppointmentQuery {
         int rowsAffected = ps.executeUpdate();
         return rowsAffected;
     }
+
+    public static void read(){
+
+    }
+
+    public static void readAll(){
+
+    }
 }

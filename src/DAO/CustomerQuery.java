@@ -2,10 +2,7 @@ package DAO;
 
 import model.Customer;
 
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Timestamp;
+import java.sql.*;
 import java.time.LocalDateTime;
 
 public abstract class CustomerQuery {
@@ -51,5 +48,35 @@ public abstract class CustomerQuery {
         return rowsAffected;
     }
 
+    public static void read(int selected_customer_id) throws SQLException {
+        String sql = "SELECT ? FROM CUSTOMERS";
+        PreparedStatement ps = JDBC.connection.prepareStatement(sql);
+        ps.setInt(1, selected_customer_id);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+            int customer_id = rs.getInt("Customer_ID");
+            String customer_name = rs.getString("Customer_Name");
+            String address = rs.getString("Address");
+            String postal_code = rs.getString("Postal_Code");
+            String phone = rs.getString("Phone");
+        }
 
+    }
+
+    public static void readAll() throws SQLException {
+        String sql = "SELECT * FROM CUSTOMERS";
+        PreparedStatement ps = JDBC.connection.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+            int customer_id = rs.getInt("Customer_ID");
+            String customer_name = rs.getString("Customer_Name");
+            String address = rs.getString("Address");
+            String postal_code = rs.getString("Postal_Code");
+            String phone = rs.getString("Phone");
+            Date create_date = rs.getDate("Create_Date");
+            String created_by = rs.getString("Created_By");
+            Timestamp last_update = rs.getTimestamp("Last_Update");
+            String last_updated_by = rs.getString("Last_Updated_By");
+        }
+    }
 }
