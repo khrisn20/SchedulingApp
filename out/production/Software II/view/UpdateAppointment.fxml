@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateAppointment">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateAppointmentController">
     <children>
         <Label layoutX="14.0" layoutY="119.0" text="Customer ID:" />
         <Label layoutX="15.0" layoutY="154.0" text="User ID:" />
@@ -24,32 +24,32 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="104.0" layoutY="115.0" />
-        <TextField layoutX="104.0" layoutY="150.0" />
-        <TextField layoutX="104.0" layoutY="185.0" />
-        <TextField layoutX="104.0" layoutY="217.0" />
-        <ChoiceBox layoutX="104.0" layoutY="250.0" prefWidth="150.0" />
-        <ChoiceBox layoutX="272.0" layoutY="250.0" prefWidth="150.0" />
-        <ChoiceBox layoutX="104.0" layoutY="282.0" prefWidth="150.0" />
-        <ChoiceBox layoutX="104.0" layoutY="313.0" prefWidth="150.0" />
-        <DatePicker layoutX="83.0" layoutY="345.0" />
-        <DatePicker layoutX="83.0" layoutY="377.0" />
-        <ComboBox layoutX="297.0" layoutY="345.0" prefHeight="25.0" prefWidth="40.0" />
-        <ComboBox layoutX="380.0" layoutY="345.0" prefHeight="25.0" prefWidth="40.0" />
+        <TextField fx:id="custIdTxt" layoutX="104.0" layoutY="115.0" />
+        <TextField fx:id="userIdTxt" layoutX="104.0" layoutY="150.0" />
+        <TextField fx:id="titleTxt" layoutX="104.0" layoutY="185.0" />
+        <TextField fx:id="descTxt" layoutX="104.0" layoutY="217.0" />
+        <ChoiceBox fx:id="locCountryDrop" layoutX="104.0" layoutY="250.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="locDivDrop" layoutX="272.0" layoutY="250.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="contactDrop" layoutX="104.0" layoutY="282.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="typeDrop" layoutX="104.0" layoutY="313.0" prefWidth="150.0" />
+        <DatePicker fx:id="startCal" layoutX="83.0" layoutY="345.0" />
+        <DatePicker fx:id="endCal" layoutX="83.0" layoutY="377.0" />
+        <ComboBox fx:id="startHr" layoutX="297.0" layoutY="345.0" prefHeight="25.0" prefWidth="40.0" />
+        <ComboBox fx:id="startMin" layoutX="380.0" layoutY="345.0" prefHeight="25.0" prefWidth="40.0" />
         <Label layoutX="271.0" layoutY="349.0" text="HH:" />
         <Label layoutX="355.0" layoutY="349.0" text="MM:" />
-        <ComboBox layoutX="464.0" layoutY="345.0" prefHeight="25.0" prefWidth="40.0" />
+        <ComboBox fx:id="startSec" layoutX="464.0" layoutY="345.0" prefHeight="25.0" prefWidth="40.0" />
         <Label layoutX="442.0" layoutY="349.0" text="SS:" />
         <Label layoutX="271.0" layoutY="381.0" text="HH:" />
-        <ComboBox layoutX="297.0" layoutY="377.0" prefHeight="25.0" prefWidth="40.0" />
+        <ComboBox fx:id="endHr" layoutX="297.0" layoutY="377.0" prefHeight="25.0" prefWidth="40.0" />
         <Label layoutX="355.0" layoutY="381.0" text="MM:" />
-        <ComboBox layoutX="380.0" layoutY="377.0" prefHeight="25.0" prefWidth="40.0" />
+        <ComboBox fx:id="endMin" layoutX="380.0" layoutY="377.0" prefHeight="25.0" prefWidth="40.0" />
         <Label layoutX="442.0" layoutY="381.0" text="SS:" />
-        <ComboBox layoutX="464.0" layoutY="377.0" prefHeight="25.0" prefWidth="40.0" />
+        <ComboBox fx:id="endSec" layoutX="464.0" layoutY="377.0" prefHeight="25.0" prefWidth="40.0" />
         <Button layoutX="18.0" layoutY="424.0" mnemonicParsing="false" onAction="#OnActionUpdateAppointment" text="Save" />
         <Button layoutX="78.0" layoutY="424.0" mnemonicParsing="false" onAction="#OnActionDisplayMainMenu" text="Cancel" />
       <Label layoutX="7.0" layoutY="77.0" text="Appointment ID:" />
-      <TextField disable="true" layoutX="104.0" layoutY="73.0" />
+      <TextField fx:id="appIdTxt" disable="true" layoutX="104.0" layoutY="73.0" />
     </children>
 
 </AnchorPane>

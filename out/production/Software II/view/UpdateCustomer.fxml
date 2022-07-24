@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateCustomer">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateCustomerController">
     <children>
         <Label layoutX="14.0" layoutY="24.0" text="Update Customer">
             <font>
@@ -20,15 +20,15 @@
         <Label layoutX="31.0" layoutY="217.0" text="State:" />
         <Label layoutX="30.0" layoutY="252.0" text="Postal Code:" />
         <Label layoutX="27.0" layoutY="286.0" text="Phone:" />
-        <TextField layoutX="102.0" layoutY="107.0" />
-        <TextField layoutX="102.0" layoutY="144.0" />
-        <TextField layoutX="101.0" layoutY="248.0" />
-        <TextField layoutX="101.0" layoutY="282.0" />
-        <ChoiceBox layoutX="101.0" layoutY="180.0" prefWidth="150.0" />
-        <ChoiceBox layoutX="101.0" layoutY="213.0" prefWidth="150.0" />
+        <TextField fx:id="nameTxt" layoutX="102.0" layoutY="107.0" />
+        <TextField fx:id="addressTxt" layoutX="102.0" layoutY="144.0" />
+        <TextField fx:id="postalTxt" layoutX="101.0" layoutY="248.0" />
+        <TextField fx:id="phoneTxt" layoutX="101.0" layoutY="282.0" />
+        <ChoiceBox fx:id="countryDrop" layoutX="101.0" layoutY="180.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="stateDrop" layoutX="101.0" layoutY="213.0" prefWidth="150.0" />
         <Button layoutX="134.0" layoutY="317.0" mnemonicParsing="false" onAction="#OnActionSaveCustomer" text="Save" />
         <Button layoutX="198.0" layoutY="317.0" mnemonicParsing="false" onAction="#OnActionDisplayMainMenu" text="Cancel" />
-      <TextField disable="true" layoutX="102.0" layoutY="70.0" />
+      <TextField fx:id="custIdTxt" disable="true" layoutX="102.0" layoutY="70.0" />
       <Label layoutX="32.0" layoutY="74.0" text="ID:" />
     </children>
 

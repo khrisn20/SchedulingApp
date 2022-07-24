@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
@@ -9,16 +10,16 @@ public class Appointment {
     private String description;
     private String location;
     private String type;
-    private LocalDateTime start;
-    private LocalDateTime end;
-    private LocalDateTime created_date;
+    private Date start;
+    private Date end;
+    private Date created_date;
     private String created_by;
     private Timestamp last_updated;
     private int customer_id;
     private int user_id;
     private int contact_id;
 
-    public Appointment(int appointment_id, String title, String description, String location, String type, LocalDateTime start, LocalDateTime end, LocalDateTime created_date, String created_by, Timestamp last_updated, int customer_id, int user_id, int contact_id) {
+    public Appointment(int appointment_id, String title, String description, String location, String type, Date start, Date end, Date created_date, String created_by, Timestamp last_updated, int customer_id, int user_id, int contact_id) {
         this.appointment_id = appointment_id;
         this.title = title;
         this.description = description;
@@ -74,27 +75,27 @@ public class Appointment {
         this.type = type;
     }
 
-    public LocalDateTime getStart() {
+    public Date getStart() {
         return start;
     }
 
-    public void setStart(LocalDateTime start) {
+    public void setStart(Date start) {
         this.start = start;
     }
 
-    public LocalDateTime getEnd() {
+    public Date getEnd() {
         return end;
     }
 
-    public void setEnd(LocalDateTime end) {
+    public void setEnd(Date end) {
         this.end = end;
     }
 
-    public LocalDateTime getCreated_date() {
+    public Date getCreated_date() {
         return created_date;
     }
 
-    public void setCreated_date(LocalDateTime created_date) {
+    public void setCreated_date(Date created_date) {
         this.created_date = created_date;
     }
 

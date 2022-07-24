@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenu">
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
    <children>
       <Label layoutX="250.0" layoutY="14.0" text="Scheduling System">
          <font>
@@ -18,30 +18,31 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <TableView layoutX="15.0" layoutY="51.0" prefHeight="200.0" prefWidth="771.0">
+      <TableView fx:id="custTableview" layoutX="15.0" layoutY="51.0" prefHeight="200.0" prefWidth="771.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="200.0" text="Name" />
-            <TableColumn prefWidth="200.0" text="Address" />
-            <TableColumn prefWidth="100.0" text="Postal Code" />
-            <TableColumn prefWidth="125.0" text="Phone" />
-            <TableColumn prefWidth="75.0" text="Division ID" />
+          <TableColumn fx:id="custIdClmn" prefWidth="40.0" text="ID" />
+          <TableColumn fx:id="nameClmn" prefWidth="150.0" text="Name" />
+            <TableColumn fx:id="addressClmn" prefWidth="200.0" text="Address" />
+            <TableColumn fx:id="countryClmn" prefWidth="90.0" text="Country" />
+            <TableColumn fx:id="stateClmn" prefWidth="90.0" text="State" />
+            <TableColumn fx:id="postalClmn" prefWidth="75.0" text="Postal Code" />
+            <TableColumn fx:id="phoneClmn" prefWidth="125.0" text="Phone" />
         </columns>
       </TableView>
       <Button layoutX="438.0" layoutY="268.0" mnemonicParsing="false" onAction="#OnActionDisplayCreateCustomer" prefHeight="25.0" prefWidth="107.0" text="Create Customer" />
       <Button layoutX="556.0" layoutY="268.0" mnemonicParsing="false" onAction="#OnActionDisplayUpdateCustomer" prefHeight="25.0" prefWidth="114.0" text="Update Customer" />
       <Button layoutX="678.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Delete Customer" />
-      <TableView layoutX="15.0" layoutY="358.0" prefHeight="200.0" prefWidth="771.0">
+      <TableView fx:id="appTableview" layoutX="15.0" layoutY="358.0" prefHeight="200.0" prefWidth="771.0">
          <columns>
-            <TableColumn prefWidth="25.0" text="ID" />
-            <TableColumn prefWidth="75.0" text="Title" />
-            <TableColumn prefWidth="75.0" text="Customer ID" />
-            <TableColumn prefWidth="75.0" text="Contact ID" />
-            <TableColumn prefWidth="75.0" text="Description" />
-            <TableColumn prefWidth="75.0" text="Location" />
-            <TableColumn prefWidth="75.0" text="Type" />
-            <TableColumn prefWidth="75.0" text="Start" />
-            <TableColumn prefWidth="75.0" text="End" />
+            <TableColumn fx:id="appIdClmn" prefWidth="40.0" text="ID" />
+            <TableColumn fx:id="titleClmn" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="appCustIdClmn" prefWidth="75.0" text="Customer ID" />
+            <TableColumn fx:id="contactIdClmn" prefWidth="75.0" text="Contact ID" />
+            <TableColumn fx:id="descClmn" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="locClmn" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="typeClmn" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="startClmn" prefWidth="75.0" text="Start" />
+            <TableColumn fx:id="endClmn" prefWidth="75.0" text="End" />
          </columns>
       </TableView>
       <Label layoutX="19.0" layoutY="331.0" text="Appointments">
