@@ -79,6 +79,9 @@ public class MainMenuController implements Initializable {
     @FXML
     private TableColumn<Appointment, LocalDateTime> endClmn;
 
+    @FXML
+    private TableColumn<?, ?> appUserIdClmn;
+
 
 
 
@@ -137,6 +140,7 @@ public class MainMenuController implements Initializable {
         typeClmn.setCellValueFactory(new PropertyValueFactory<>("type"));
         startClmn.setCellValueFactory(new PropertyValueFactory<>("start"));
         endClmn.setCellValueFactory(new PropertyValueFactory<>("end"));
+        appUserIdClmn.setCellValueFactory(new PropertyValueFactory<>("user_id"));
 
 
 

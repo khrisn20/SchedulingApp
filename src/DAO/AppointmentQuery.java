@@ -1,9 +1,6 @@
 package DAO;
 
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Timestamp;
+import java.sql.*;
 import java.time.LocalDateTime;
 
 public class AppointmentQuery {
@@ -48,18 +45,49 @@ public class AppointmentQuery {
     }
 
     public static int delete(int appointment_id) throws SQLException {
-        String sql = "DELETE FROM APPOINTMENTS WHERE Appointment_ID =?";
+        String sql = "DELETE FROM APPOINTMENTS WHERE Appointment_ID = ?";
         PreparedStatement ps = JDBC.connection.prepareStatement(sql);
         ps.setInt(1, appointment_id);
         int rowsAffected = ps.executeUpdate();
         return rowsAffected;
     }
 
-    public static void read(){
-
+    public static void read(int selected_appointment_id) throws SQLException {
+        String sql = "SELECT * FROM APPOINTMENTS WHERE Appointment_ID = ?";
+        PreparedStatement ps = JDBC.connection.prepareStatement(sql);
+        ps.setInt(1, selected_appointment_id);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()){
+            int appointment_id = rs.getInt("Appointment_ID");
+            int customer_id = rs.getInt("Customer_ID");
+            int user_id = rs.getInt("User_ID");
+            String title = rs.getString("Title");
+            String description = rs.getString("Description");
+            String location = rs.getString("Location");
+            int contact_id = rs.getInt("Contact_ID");
+            String type = rs.getString("Type");
+            Date start = rs.getDate("Start");
+            Date end = rs.getDate("End");
+        }
     }
 
-    public static void readAll(){
+    public static void readAll() throws SQLException {
+        String sql = "SELECT * FROM APPOINTMENTS";
+        PreparedStatement ps = JDBC.connection.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+            int appointment_id = rs.getInt("Appointment_ID");
+            String title = rs.getString("Title");
+            int customer_id = rs.getInt("Customer_ID");
+            int contact_id = rs.getInt("Contact_ID");
+            String description = rs.getString("Description");
+            String location = rs.getString("Location");
+            String type = rs.getString("Type");
+            Date start = rs.getDate("Start");
+            Date end = rs.getDate("End");
+            int user_id = rs.getInt("User_ID");
+        }
+
 
     }
 }

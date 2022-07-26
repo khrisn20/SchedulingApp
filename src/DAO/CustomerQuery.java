@@ -49,7 +49,7 @@ public abstract class CustomerQuery {
     }
 
     public static void read(int selected_customer_id) throws SQLException {
-        String sql = "SELECT ? FROM CUSTOMERS";
+        String sql = "SELECT * FROM CUSTOMERS WHERE Customer_ID = ?";
         PreparedStatement ps = JDBC.connection.prepareStatement(sql);
         ps.setInt(1, selected_customer_id);
         ResultSet rs = ps.executeQuery();
