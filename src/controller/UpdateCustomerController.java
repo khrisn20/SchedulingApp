@@ -47,8 +47,6 @@ public class UpdateCustomerController implements Initializable {
     @FXML
     private ComboBox<FirstLevelDivision> stateDrop;
 
-
-
     @FXML
     void OnActionDisplayMainMenu(ActionEvent event) throws IOException {
         stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
@@ -63,6 +61,15 @@ public class UpdateCustomerController implements Initializable {
         scene = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
+    }
+
+    public void readCustomer(Customer customer){
+        custIdTxt.setText(String.valueOf(customer.getCustomer_id()));
+        nameTxt.setText(customer.getCustomer_name());
+        addressTxt.setText(customer.getAddress());
+        postalTxt.setText(customer.getPostal_code());
+        phoneTxt.setText(customer.getPhone());
+
     }
 
     @Override

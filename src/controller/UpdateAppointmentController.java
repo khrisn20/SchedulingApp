@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import model.Appointment;
 import model.Contact;
 import model.Country;
 import model.FirstLevelDivision;
@@ -71,7 +72,7 @@ public class UpdateAppointmentController implements Initializable {
     private TextField titleTxt;
 
     @FXML
-    private ComboBox<?> typeDrop;
+    private TextField typeTxt;
 
     @FXML
     private TextField userIdTxt;
@@ -90,6 +91,15 @@ public class UpdateAppointmentController implements Initializable {
         scene = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
+    }
+
+    public void readAppointment(Appointment appointment){
+        appIdTxt.setText(String.valueOf(appointment.getAppointment_id()));
+        custIdTxt.setText(String.valueOf(appointment.getCustomer_id()));
+        userIdTxt.setText(String.valueOf(appointment.getUser_id()));
+        titleTxt.setText(appointment.getTitle());
+        descTxt.setText(appointment.getDescription());
+        typeTxt.setText(appointment.getType());
     }
 
     @Override

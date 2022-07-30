@@ -106,21 +106,38 @@ public class MainMenuController implements Initializable {
 
     @FXML
     void OnActionDisplayUpdateAppointment(ActionEvent event) throws IOException {
+        Appointment appointment = appTableview.getSelectionModel().getSelectedItem();
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/UpdateAppointment.fxml"));
+        loader.load();
+
+        UpdateAppointmentController UAController = loader.getController();
+        UAController.readAppointment(appointment);
+
         stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/UpdateAppointment.fxml"));
+        Parent scene = loader.getRoot();
         stage.setScene(new Scene(scene));
         stage.show();
-
     }
 
     @FXML
     void OnActionDisplayUpdateCustomer(ActionEvent event) throws IOException {
         Customer customer = custTableview.getSelectionModel().getSelectedItem();
 
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/UpdateCustomer.fxml"));
+        loader.load();
+
+        UpdateCustomerController UCController = loader.getController();
+        UCController.readCustomer(customer);
+
         stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/UpdateCustomer.fxml"));
+        Parent scene = loader.getRoot();
         stage.setScene(new Scene(scene));
         stage.show();
+
+
     }
 
     @Override
