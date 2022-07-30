@@ -18,7 +18,7 @@ public class CreateAppointmentController implements Initializable {
     Parent scene;
 
     @FXML
-    private ChoiceBox<?> contactDrop;
+    private ComboBox<?> contactDrop;
 
     @FXML
     private TextField customerIDTxt;
@@ -39,10 +39,10 @@ public class CreateAppointmentController implements Initializable {
     private ComboBox<?> endSec;
 
     @FXML
-    private ChoiceBox<?> locCountryDrop;
+    private ComboBox<?> locCountryDrop;
 
     @FXML
-    private ChoiceBox<?> locDivDrop;
+    private ComboBox<?> locDivDrop;
 
     @FXML
     private DatePicker startCal;
@@ -60,7 +60,7 @@ public class CreateAppointmentController implements Initializable {
     private TextField titleTxt;
 
     @FXML
-    private ChoiceBox<?> typeDrop;
+    private ComboBox<?> typeDrop;
 
     @FXML
     private TextField userIDtxt;

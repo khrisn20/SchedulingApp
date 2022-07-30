@@ -28,10 +28,10 @@
         <TextField fx:id="userIdTxt" layoutX="104.0" layoutY="150.0" />
         <TextField fx:id="titleTxt" layoutX="104.0" layoutY="185.0" />
         <TextField fx:id="descTxt" layoutX="104.0" layoutY="217.0" />
-        <ChoiceBox fx:id="locCountryDrop" layoutX="104.0" layoutY="250.0" prefWidth="150.0" />
-        <ChoiceBox fx:id="locDivDrop" layoutX="272.0" layoutY="250.0" prefWidth="150.0" />
-        <ChoiceBox fx:id="contactDrop" layoutX="104.0" layoutY="282.0" prefWidth="150.0" />
-        <ChoiceBox fx:id="typeDrop" layoutX="104.0" layoutY="313.0" prefWidth="150.0" />
+        <ComboBox fx:id="locCountryDrop" layoutX="104.0" layoutY="250.0" prefWidth="150.0" />
+        <ComboBox fx:id="locDivDrop" layoutX="272.0" layoutY="250.0" prefWidth="150.0" />
+        <ComboBox fx:id="contactDrop" layoutX="104.0" layoutY="282.0" prefWidth="150.0" />
+        <ComboBox fx:id="typeDrop" layoutX="104.0" layoutY="313.0" prefWidth="150.0" />
         <DatePicker fx:id="startCal" layoutX="83.0" layoutY="345.0" />
         <DatePicker fx:id="endCal" layoutX="83.0" layoutY="377.0" />
         <ComboBox fx:id="startHr" layoutX="297.0" layoutY="345.0" prefHeight="25.0" prefWidth="40.0" />

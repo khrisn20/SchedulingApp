@@ -21,7 +21,7 @@ public class UpdateAppointmentController implements Initializable {
     private TextField appIdTxt;
 
     @FXML
-    private ChoiceBox<?> contactDrop;
+    private ComboBox<?> contactDrop;
 
     @FXML
     private TextField custIdTxt;
@@ -42,10 +42,10 @@ public class UpdateAppointmentController implements Initializable {
     private ComboBox<?> endSec;
 
     @FXML
-    private ChoiceBox<?> locCountryDrop;
+    private ComboBox<?> locCountryDrop;
 
     @FXML
-    private ChoiceBox<?> locDivDrop;
+    private ComboBox<?> locDivDrop;
 
     @FXML
     private DatePicker startCal;
@@ -63,7 +63,7 @@ public class UpdateAppointmentController implements Initializable {
     private TextField titleTxt;
 
     @FXML
-    private ChoiceBox<?> typeDrop;
+    private ComboBox<?> typeDrop;
 
     @FXML
     private TextField userIdTxt;

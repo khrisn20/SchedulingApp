@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -23,7 +24,7 @@ public class CreateCustomerController implements Initializable {
     private TextField addressTxt;
 
     @FXML
-    private ChoiceBox<?> countryDrop;
+    private ComboBox<?> countryDrop;
 
     @FXML
     private TextField nameTxt;
@@ -35,7 +36,7 @@ public class CreateCustomerController implements Initializable {
     private TextField postalTxt;
 
     @FXML
-    private ChoiceBox<?> stateDrop;
+    private ComboBox<?> stateDrop;
 
     @FXML
     void OnActionDisplayMainMenu(ActionEvent event) throws IOException {
