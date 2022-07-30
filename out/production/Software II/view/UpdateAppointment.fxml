@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateAppointmentController">
     <children>
@@ -20,10 +21,9 @@
         <Label layoutX="13.0" layoutY="349.0" text="Start Time:" />
         <Label layoutX="15.0" layoutY="381.0" text="End Time:" />
         <Label layoutX="14.0" layoutY="14.0" text="Update Appointment">
-            <font>
-                <Font name="System Bold" size="14.0" />
-            </font>
-        </Label>
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
         <TextField fx:id="custIdTxt" layoutX="104.0" layoutY="115.0" />
         <TextField fx:id="userIdTxt" layoutX="104.0" layoutY="150.0" />
         <TextField fx:id="titleTxt" layoutX="104.0" layoutY="185.0" />

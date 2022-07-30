@@ -1,5 +1,8 @@
 package DAO;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import model.Appointment;
 import model.Customer;
 
 import java.sql.*;
@@ -63,7 +66,10 @@ public abstract class CustomerQuery {
 
     }
 
-    public static void readAll() throws SQLException {
+    public static ObservableList<Customer> readAll() throws SQLException {
+        ObservableList<Customer> aList = FXCollections.observableArrayList();
+
+
         String sql = "SELECT * FROM CUSTOMERS";
         PreparedStatement ps = JDBC.connection.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
@@ -73,10 +79,11 @@ public abstract class CustomerQuery {
             String address = rs.getString("Address");
             String postal_code = rs.getString("Postal_Code");
             String phone = rs.getString("Phone");
-            Date create_date = rs.getDate("Create_Date");
-            String created_by = rs.getString("Created_By");
-            Timestamp last_update = rs.getTimestamp("Last_Update");
-            String last_updated_by = rs.getString("Last_Updated_By");
+            int division_id = rs.getInt("Division_ID");
+
+            Customer customer = new Customer(customer_id, customer_name, address, postal_code, phone, division_id);
+            aList.add(customer);
         }
+        return aList;
     }
 }

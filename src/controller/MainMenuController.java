@@ -1,5 +1,7 @@
 package controller;
 
+import DAO.AppointmentQuery;
+import DAO.CustomerQuery;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +17,7 @@ import model.*;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
@@ -121,7 +124,11 @@ public class MainMenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb){
 
-        custTableview.setItems(DataProvider.getAllCustomers());
+        try {
+            custTableview.setItems(CustomerQuery.readAll());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         custIdClmn.setCellValueFactory(new PropertyValueFactory<>("customer_id"));
         nameClmn.setCellValueFactory(new PropertyValueFactory<>("customer_name"));
         addressClmn.setCellValueFactory(new PropertyValueFactory<>("address"));
@@ -130,7 +137,12 @@ public class MainMenuController implements Initializable {
         postalClmn.setCellValueFactory(new PropertyValueFactory<>("postal_code"));
         phoneClmn.setCellValueFactory(new PropertyValueFactory<>("phone"));
 
-        appTableview.setItems(DataProvider.getAllAppointments());
+
+        try {
+            appTableview.setItems(AppointmentQuery.readAll());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         appIdClmn.setCellValueFactory(new PropertyValueFactory<>("appointment_id"));
         titleClmn.setCellValueFactory(new PropertyValueFactory<>("title"));
         appCustIdClmn.setCellValueFactory(new PropertyValueFactory<>("customer_id"));

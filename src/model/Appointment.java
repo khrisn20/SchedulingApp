@@ -10,16 +10,29 @@ public class Appointment {
     private String description;
     private String location;
     private String type;
-    private Date start;
-    private Date end;
-    private Date created_date;
+    private LocalDateTime start;
+    private LocalDateTime end;
+    private LocalDateTime created_date;
     private String created_by;
     private Timestamp last_updated;
     private int customer_id;
     private int user_id;
     private int contact_id;
 
-    public Appointment(int appointment_id, String title, String description, String location, String type, Date start, Date end, Date created_date, String created_by, Timestamp last_updated, int customer_id, int user_id, int contact_id) {
+    public Appointment(int appointment_id, String title, String description, String location, String type, LocalDateTime start, LocalDateTime end, int customer_id, int user_id, int contact_id) {
+        this.appointment_id = appointment_id;
+        this.title = title;
+        this.description = description;
+        this.location = location;
+        this.type = type;
+        this.start = start;
+        this.end = end;
+        this.customer_id = customer_id;
+        this.user_id = user_id;
+        this.contact_id = contact_id;
+    }
+
+    public Appointment(int appointment_id, String title, String description, String location, String type, LocalDateTime start, LocalDateTime end, LocalDateTime created_date, String created_by, Timestamp last_updated, int customer_id, int user_id, int contact_id) {
         this.appointment_id = appointment_id;
         this.title = title;
         this.description = description;
@@ -75,27 +88,27 @@ public class Appointment {
         this.type = type;
     }
 
-    public Date getStart() {
+    public LocalDateTime getStart() {
         return start;
     }
 
-    public void setStart(Date start) {
+    public void setStart(LocalDateTime start) {
         this.start = start;
     }
 
-    public Date getEnd() {
+    public LocalDateTime getEnd() {
         return end;
     }
 
-    public void setEnd(Date end) {
+    public void setEnd(LocalDateTime end) {
         this.end = end;
     }
 
-    public Date getCreated_date() {
+    public LocalDateTime getCreated_date() {
         return created_date;
     }
 
-    public void setCreated_date(Date created_date) {
+    public void setCreated_date(LocalDateTime created_date) {
         this.created_date = created_date;
     }
 

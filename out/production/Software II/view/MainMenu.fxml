@@ -36,13 +36,14 @@
          <columns>
             <TableColumn fx:id="appIdClmn" prefWidth="40.0" text="ID" />
             <TableColumn fx:id="titleClmn" prefWidth="75.0" text="Title" />
-            <TableColumn fx:id="appCustIdClmn" prefWidth="75.0" text="Customer ID" />
-            <TableColumn fx:id="contactIdClmn" prefWidth="75.0" text="Contact ID" />
             <TableColumn fx:id="descClmn" prefWidth="75.0" text="Description" />
             <TableColumn fx:id="locClmn" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="contactIdClmn" prefWidth="75.0" text="Contact ID" />
             <TableColumn fx:id="typeClmn" prefWidth="75.0" text="Type" />
             <TableColumn fx:id="startClmn" prefWidth="75.0" text="Start" />
             <TableColumn fx:id="endClmn" prefWidth="75.0" text="End" />
+            <TableColumn fx:id="appCustIdClmn" prefWidth="75.0" text="Customer ID" />
+            <TableColumn fx:id="appUserIdClmn" prefWidth="75.0" text="User ID" />
          </columns>
       </TableView>
       <Label layoutX="19.0" layoutY="331.0" text="Appointments">
