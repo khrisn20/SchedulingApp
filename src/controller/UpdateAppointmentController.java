@@ -1,5 +1,8 @@
 package controller;
 
+import DAO.ContactQuery;
+import DAO.CountryQuery;
+import DAO.FirstLevelDivisionQuery;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,9 +11,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import model.Contact;
+import model.Country;
+import model.FirstLevelDivision;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
 public class UpdateAppointmentController implements Initializable {
@@ -21,7 +29,7 @@ public class UpdateAppointmentController implements Initializable {
     private TextField appIdTxt;
 
     @FXML
-    private ComboBox<?> contactDrop;
+    private ComboBox<Contact> contactDrop;
 
     @FXML
     private TextField custIdTxt;
@@ -33,31 +41,31 @@ public class UpdateAppointmentController implements Initializable {
     private DatePicker endCal;
 
     @FXML
-    private ComboBox<?> endHr;
+    private ComboBox<LocalDateTime> endHr;
 
     @FXML
-    private ComboBox<?> endMin;
+    private ComboBox<LocalDateTime> endMin;
 
     @FXML
-    private ComboBox<?> endSec;
+    private ComboBox<LocalDateTime> endSec;
 
     @FXML
-    private ComboBox<?> locCountryDrop;
+    private ComboBox<Country> locCountryDrop;
 
     @FXML
-    private ComboBox<?> locDivDrop;
+    private ComboBox<FirstLevelDivision> locDivDrop;
 
     @FXML
     private DatePicker startCal;
 
     @FXML
-    private ComboBox<?> startHr;
+    private ComboBox<LocalDateTime> startHr;
 
     @FXML
-    private ComboBox<?> startMin;
+    private ComboBox<LocalDateTime> startMin;
 
     @FXML
-    private ComboBox<?> startSec;
+    private ComboBox<LocalDateTime> startSec;
 
     @FXML
     private TextField titleTxt;
@@ -87,5 +95,22 @@ public class UpdateAppointmentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb){
 
+        try {
+            contactDrop.setItems(ContactQuery.readAll());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        try {
+            locCountryDrop.setItems(CountryQuery.readAll());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        try {
+            locDivDrop.setItems(FirstLevelDivisionQuery.readAll());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }

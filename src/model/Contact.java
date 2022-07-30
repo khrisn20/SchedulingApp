@@ -34,4 +34,9 @@ public class Contact {
         this.contact_name = contact_name;
         this.email = email;
     }
+
+    @Override
+    public String toString(){
+        return(contact_name);
+    }
 }

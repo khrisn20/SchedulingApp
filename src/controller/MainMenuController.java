@@ -115,6 +115,8 @@ public class MainMenuController implements Initializable {
 
     @FXML
     void OnActionDisplayUpdateCustomer(ActionEvent event) throws IOException {
+        Customer customer = custTableview.getSelectionModel().getSelectedItem();
+
         stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
         scene = FXMLLoader.load(getClass().getResource("/view/UpdateCustomer.fxml"));
         stage.setScene(new Scene(scene));

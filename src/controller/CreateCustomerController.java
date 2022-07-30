@@ -1,5 +1,7 @@
 package controller;
 
+import DAO.CountryQuery;
+import DAO.FirstLevelDivisionQuery;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,9 +13,12 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.Country;
+import model.FirstLevelDivision;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class CreateCustomerController implements Initializable {
@@ -24,7 +29,7 @@ public class CreateCustomerController implements Initializable {
     private TextField addressTxt;
 
     @FXML
-    private ComboBox<?> countryDrop;
+    private ComboBox<Country> countryDrop;
 
     @FXML
     private TextField nameTxt;
@@ -36,7 +41,7 @@ public class CreateCustomerController implements Initializable {
     private TextField postalTxt;
 
     @FXML
-    private ComboBox<?> stateDrop;
+    private ComboBox<FirstLevelDivision> stateDrop;
 
     @FXML
     void OnActionDisplayMainMenu(ActionEvent event) throws IOException {
@@ -58,6 +63,16 @@ public class CreateCustomerController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
+        try {
+            countryDrop.setItems(CountryQuery.readAll());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
+        try {
+            stateDrop.setItems(FirstLevelDivisionQuery.readAll());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }

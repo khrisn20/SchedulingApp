@@ -77,4 +77,9 @@ public class FirstLevelDivision {
         this.last_updated_by = last_updated_by;
         this.country_id = country_id;
     }
+
+    @Override
+    public String toString(){
+        return(division);
+    }
 }
